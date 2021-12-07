@@ -89,8 +89,10 @@ function del() {
 
 //darkmode
 let h = document.querySelector('#all')
+let calc = document.getElementById('output-screen')
 let darkbtn = document.getElementById('dar');
 
 darkbtn.addEventListener('click', () => {
     h.classList.toggle('dark-theme')
+    calc.classList.toggle('dark');
 })
