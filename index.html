@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="combine.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section id="all">
+        <!-- Calculator and navbar -->
+        <div class="row mx-0">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-dark back fixed-top">
+                    <a href="" class="navbar-brand h1">SM</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                            <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Games etc </a>
+                                <div class="dropdown-menu">
+                                    <a href="#AgeCalculator" class="dropdown-item">Age Calculator</a>
+                                    <a href="#Calculator" class="dropdown-item">Calculator</a>
+                                    <a href="" class="dropdown-item">M</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav-link">Contact us </a></li>
+                            <li class="nav-item"><a href="" class="nav-link">About us</a></li>
+                            <li class="nav-item"><button class="btn btn-info record-btn">Record</button></li>
+                            <li class="nav-item"><button id="dar" class="btn btn-dark ml-2">Dark</button></li>
+                        </ul>
+                        </ul>
+
+                        <span class="navbar-text"></span>
+
+                        <form action="" class="form-inline ">
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-primary  my-sm-0">Search</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- home -->
+
+        <section id="home">
+            <div class="text-box">
+                <h1>I'm <span class="auto-input"></span></h1>
+                <p>If you need any help in making a website for you or your business. <br> Contact me</p>
+                <div class="homebtn">
+                    <a href="Shahrukh Mehmood Resume (1).pdf">Download Cv</a>
+                    <a href="https://wa.me/923445566158">Contact me</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="AgeCalculator">
+            <div class="heading">
+                <h1>SM AGE Calculator</h1>
+            </div>
+            <div id="3" class="container-fluid ">
+                <div class="row">
+                    <div class="col-sm-6 py-sm-4 my-sm-3 mx-auto form-background">
+
+
+                        <form action="">
+                            <h1 class=" d-flex text-center">Age Calcuator</h1>
+                            <p>Name:<input type="text" id="nameSM" class="form-control mb-md-3" placeholder="User Name"></p>
+                            <p>Date: <input type="number" id="date" class="form-control mb-md-3" placeholder="dd" minlength="1" maxlength="2"></p>
+                            <p>Month: <input type="number" id="month" class="form-control mb--md-3" placeholder="mm" minlength="1" maxlength="2"></p>
+                            <p>Year: <input type="number" id="year" class="form-control mb--md-3" placeholder="yyyy" minlength="4" maxlength="4"></p>
+
+
+                        </form>
+                        <div class="col d-flex justify-content-center">
+                            <input type="Button" class="btn btn-primary align-self-center " name="submit" Value="Submit" onclick="SM()">
+                        </div>
+                        <div class="row justify-content-sm-center">
+                            <div id="SM"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Calculator -->
+        <section id="Calculator">
+            <div class="heading">
+                <h1>SMCalculator</h1>
+            </div>
+            <div class="calculator-grid .calculator">
+
+                <div class="output">
+                    <input type="text" placeholder="0" id="output-screen">
+                </div>
+                <button class="span-two" onclick="Clear()">AC</button>
+
+                <button onclick="del()">DEL</button>
+                <button onclick="display('/')">÷</button>
+                <button onclick="display('1')">1</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('3')">3</button>
+                <button onclick="display('*')">*</button>
+                <button onclick="display('4')">4</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('6')">6</button>
+                <button onclick="display('+')">+</button>
+                <button onclick="display('7')">7</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('9')">9</button>
+                <button onclick="display('-')">-</button>
+                <button onclick="display('.')">.</button>
+                <button onclick="display('0')">0</button>
+                <button class="span-two" onclick="calculate('=')">=</button>
+
+            </div>
+        </section>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        let typed = new Typed(".auto-input", {
+            strings: ["Shahrukh Mehmood", "Web Designer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+
+
+        // let m = document.querySelector('#all')
+        // let darkbtn = document.getElementById('dar');
+
+        // darkbtn.addEventListener('click', () => {
+        //     m.classList.add('.dark-theme')
+
+        // })
+    </script>
+    <script src="combine.js"></script>
+</body>
+
+</html>

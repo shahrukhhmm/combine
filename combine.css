@@ -1,0 +1,140 @@
+/* calculator and navbar */
+
+* {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+    scroll-behavior: smooth 1.5s;
+}
+
+:root {
+    --clr-black: #000;
+    /* --clr-white: radial-gradient(circle, rgba(174, 238, 231, 1) 0%, rgba(65, 152, 252, 1) 85%, rgba(89, 129, 245, 1) 100%, rgba(136, 113, 219, 1) 100%); */
+    --clr-white: white;
+}
+
+#all {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+#all.dark-theme {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.back {
+    background-color: rgba(0, 0, 0, 0.63);
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+.form-background {
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.185);
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+#AgeCalculator {
+    position: inherit;
+    top: 10%;
+}
+
+
+/* home */
+
+.text-box {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 26px;
+    height: 100vh;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-box h1 {
+    font-size: 3rem;
+}
+
+
+/* Calculator */
+
+.heading {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #444444;
+    margin-bottom: 2%;
+    background: #ffffff4b;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+::placeholder {
+    color: black;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 30vh;
+    grid-template-columns: repeat(4, 3em);
+    grid-template-rows: minmax(120px, auto) repeat(5, 3em);
+}
+
+.calculator-grid button {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid rgb(0, 255, 255);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 5px;
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(0, 255, 242, 0.795);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    /* word-wrap: break-word;
+    word-break: break-all; */
+}
+
+
+/* .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 1.5rem;
+} */
+
+.output input {
+    border: 2px solid rgba(0, 255, 242, 0.795);
+    border-radius: 5px;
+    margin: auto;
+    height: 6rem;
+    max-width: 195px;
+    background: rgba(63, 62, 62, 0.493);
+    font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
